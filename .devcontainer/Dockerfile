@@ -9,6 +9,9 @@ RUN apt-get update \
     libxml2-dev \
     libhdf5-dev \
     libglpk-dev \
+    hdf5-tools \ 
+    libhdf5=cpp-100 \
+    gfortran \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Seurat and SeuratDisk R packages
