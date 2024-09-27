@@ -1,5 +1,4 @@
-FROM ghcr.io/rocker-org/devcontainer/tidyverse:4
-
+FROM rocker/r-ver:4
 
 # Install system dependencies for Seurat and SeuratDisk
 RUN apt-get update \
@@ -11,6 +10,7 @@ RUN apt-get update \
     hdf5-tools \ 
     gfortran \
     libglpk-dev \
+    patch \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Seurat and SeuratDisk R packages
