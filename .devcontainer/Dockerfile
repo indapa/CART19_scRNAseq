@@ -8,6 +8,7 @@ RUN apt-get update \
     libssl-dev \
     libxml2-dev \
     libhdf5-dev \
+    libglpk-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Seurat and SeuratDisk R packages
