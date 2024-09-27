@@ -4,6 +4,7 @@ FROM rocker/r-ver:4
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     libcurl4-openssl-dev \
+    git \
     libssl-dev \
     libxml2-dev \
     libhdf5-dev \
