@@ -8,6 +8,8 @@ RUN apt-get update \
     libssl-dev \
     libxml2-dev \
     libhdf5-dev \
+    hdf5-tools \ 
+    gfortran \
     libglpk-dev \
     && rm -rf /var/lib/apt/lists/*
 
