@@ -12,5 +12,5 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Seurat and SeuratDisk R packages
-RUN R -q -e 'install.packages(c("curl","Seurat", "remotes"))' \
+RUN R -q -e 'install.packages(c("curl","Seurat", "remotes", "hdf5r"))' \
     && R -q -e 'remotes::install_github("mojaveazure/seurat-disk")'
