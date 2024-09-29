@@ -6,6 +6,8 @@ RUN apt-get update \
     wget \
     git \
     libcurl4-openssl-dev \
+    wget \
+    git \
     libssl-dev \
     libxml2-dev \
     libhdf5-dev \
