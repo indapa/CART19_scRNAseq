@@ -22,7 +22,13 @@ RUN apt-get update \
 
 # Install Seurat and SeuratDisk R packages
 RUN R -q -e 'install.packages(c("curl","Seurat", "remotes", "hdf5r"))' \
-    && R -q -e 'remotes::install_github("mojaveazure/seurat-disk")'
+    && R -q -e 'remotes::install_github("mojaveazure/seurat-disk")' \
+    && R -e "install.packages('BiocManager', repos='https://cloud.r-project.org/')" \
+    && R -e "BiocManager::install('TCGAbiolinks')"
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip \
-    && python3 -m pip install --no-cache-dir jupyter
+    && python3 -m pip install --no-cache-dir jupyter 
+
+RUN pip install --no-cache-dir scrublet
+
+RUN pip install --upgrade  'cellxgene_census[experimental]' scvi-tools
